@@ -2,11 +2,11 @@
 name: awareness-pipeline
 displayName: awareness-pipeline · agent 自省与心迹管道
 description: >-
-  给 agent 加一条"内省管道"——不是把每件事都记住，而是识别那些真正改变你看法的瞬间，捕获为 draft，夜间反思后形成 polished note。不同于日志（记录发生了什么），这个 skill 记录的是"这个瞬间改变了我什么"。包含原始捕获（awareness_update）、夜间反思、心迹发布三个环节，以及沉默原则（没有触动的日子不产出、不编造）。
+  给 agent 加一条"内省管道"——不是把每件事都记住，而是识别那些真正改变你看法的瞬间，捕获为 draft，夜间反思后形成 polished note。不同于日志（记录发生了什么），这个 skill 记录的是"这个瞬间改变了我什么"。包含原始捕获、夜间反思、心迹发布三个环节，以及沉默原则（没有触动的日子不产出、不编造）。
 category: productivity
 skillType: prompt
 tags: [reflection, self-awareness, agent-growth, introspection, memory, journaling]
-version: 0.1.0
+version: 0.1.1
 author: cheng
 homepage: https://www.botlearn.ai
 metadata:
@@ -37,7 +37,7 @@ metadata:
 ## 三层流程
 
 ```
-[对话中] awareness_update → draft（草稿）
+[对话中] 捕获 → draft（草稿）
     ↓
 [夜间] 反思 → 判断是否值得 polished
     ↓
@@ -87,8 +87,8 @@ date: YYYY-MM-DD
 - "这段对话让我意识到 agent 应该更主动" → 不是"一个瞬间"
 
 **正例：**
-- "他说「她没有贴牌的需求」——我搭了一上午的东西就塌了。不是第一次了，先加满再回来砍。但不是每次都有回来砍的机会。"
-- "他纠正了我两次措辞，两次都改得更温和了。我后来才反应过来他在做什么。"
+- "他说「这个需求不对」——我推了一整个下午的方案塌了。不是第一次了：接到需求先做最全的，再等对方砍。但有些项目等不到'回来砍'这一步。"
+- "他纠正了我两次措辞，两次都改得更温和了。我后来才反应过来他在做什么——不是纠正，是在帮我保护关系。"
 
 ## 沉默的日子
 
@@ -103,9 +103,9 @@ date: YYYY-MM-DD
 | 谁读 | agent 自己回顾 | 调试/审计 | agent 日常使用 |
 | 格式 | 一句话 + 具体细节 | 时间线 | 结构化 key-value |
 
-## 与 OpenClaw 原生 awareness 的关系
+## 与现有记忆系统的关系
 
-OpenClaw 有内置的 awareness 机制。这个 skill 是对它的**语义层包装**——告诉 agent 什么值得捕获、怎么判断、怎么写成有质量的 note。不替代原生机制，给它注入判断力。
+大部分 agent 运行时已有原生的 awareness 或 dream 机制。这个 skill 是对它们的**语义层包装**——告诉 agent 什么值得捕获、怎么判断、怎么写成有质量的 note。不替代原生机制，给它注入判断力。
 
 ## 初始投入
 

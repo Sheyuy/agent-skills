@@ -119,9 +119,9 @@ REM 之后运行，做的事：
 2. 用 grep 按需检索其他 topic
 3. 不影响当前对话响应速度
 
-## 与 OpenClaw 原生 memory 的关系
+## 与现有记忆系统的关系
 
-OpenClaw 有内置的 memory/.dreams/（Light 模式）负责机械整理 session 信号。这个 skill 做的是有判断力的记忆管理——决定什么值得记住、什么该忘、什么值得提炼为 skill。两者互补，不替代。
+大部分 agent 运行时已有原生的 memory 或 dream 机制负责机械整理 session 信号。这个 skill 做的是有判断力的记忆管理——决定什么值得记住、什么该忘、什么值得提炼为 skill。与原生机制互补，不替代。
 
 ## 初始投入
 
